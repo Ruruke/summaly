@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = default_1;
 function default_1(s, max) {
     if (s == null)
         return s;
@@ -11,4 +12,3 @@ function default_1(s, max) {
         return s;
     }
 }
-exports.default = default_1;

@@ -9,11 +9,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.postProcess = exports.isImageObject = exports.test = void 0;
+exports.isImageObject = void 0;
+exports.test = test;
+exports.postProcess = postProcess;
 function test(url) {
     return /^nijie[.]info$/.test(url.hostname);
 }
-exports.test = test;
 const isImageObject = (object) => object['@type'] === 'ImageObject';
 exports.isImageObject = isImageObject;
 function postProcess(summaly) {
@@ -43,4 +44,3 @@ function postProcess(summaly) {
         return summaly;
     });
 }
-exports.postProcess = postProcess;

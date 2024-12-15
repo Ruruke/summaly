@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = default_1;
 const escapeRegExp = require('escape-regexp');
 function default_1(title, siteName) {
     if (title == null)
@@ -21,4 +22,3 @@ function default_1(title, siteName) {
     }
     return title;
 }
-exports.default = default_1;

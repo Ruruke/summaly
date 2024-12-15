@@ -9,13 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.process = exports.test = void 0;
+exports.test = test;
+exports.process = process;
 const general_1 = require("../general");
 const status_error_1 = require("../utils/status-error");
 function test(url) {
     return url.hostname === 'www.dlsite.com';
 }
-exports.test = test;
 function process(url) {
     return __awaiter(this, void 0, void 0, function* () {
         const summaly = yield (0, general_1.default)(url).catch(e => {
@@ -42,4 +42,3 @@ function process(url) {
         return summaly;
     });
 }
-exports.process = process;

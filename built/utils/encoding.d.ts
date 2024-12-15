@@ -1,4 +1,3 @@
-/// <reference types="node" />
 /**
  * Detect HTML encoding
  * @param body Body in Buffer

@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.toUtf8 = exports.detectEncoding = void 0;
+exports.detectEncoding = detectEncoding;
+exports.toUtf8 = toUtf8;
 const iconv = require("iconv-lite");
 const jschardet = require("jschardet");
 const regCharset = new RegExp(/charset\s*=\s*["']?([\w-]+)/, 'i');
@@ -28,11 +29,9 @@ function detectEncoding(body) {
     }
     return 'utf-8';
 }
-exports.detectEncoding = detectEncoding;
 function toUtf8(body, encoding) {
     return iconv.decode(body, encoding);
 }
-exports.toUtf8 = toUtf8;
 function toEncoding(candicate) {
     if (iconv.encodingExists(candicate)) {
         if (['shift_jis', 'shift-jis', 'windows-31j', 'x-sjis'].includes(candicate.toLowerCase()))

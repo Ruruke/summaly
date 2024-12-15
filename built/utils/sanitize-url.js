@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sanitizeUrl = void 0;
+exports.sanitizeUrl = sanitizeUrl;
 function sanitizeUrl(str) {
     if (str == null)
         return str;
@@ -18,4 +18,3 @@ function sanitizeUrl(str) {
     }
     return null;
 }
-exports.sanitizeUrl = sanitizeUrl;

@@ -9,7 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.process = exports.test = void 0;
+exports.test = test;
+exports.process = process;
 // 高速YouTubeプラグイン
 const got_1 = require("../utils/got");
 const cheerio = require("cheerio");
@@ -24,7 +25,6 @@ function test(url) {
     }
     return false;
 }
-exports.test = test;
 function process(url) {
     return __awaiter(this, void 0, void 0, function* () {
         var _a, _b, _c;
@@ -55,4 +55,3 @@ function process(url) {
         };
     });
 }
-exports.process = process;

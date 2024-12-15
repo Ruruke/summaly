@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkAllowedUrl = void 0;
+exports.checkAllowedUrl = checkAllowedUrl;
 const PrivateIp = require('private-ip');
 function checkAllowedUrl(url) {
     try {
@@ -33,4 +33,3 @@ function checkAllowedUrl(url) {
         return false;
     }
 }
-exports.checkAllowedUrl = checkAllowedUrl;

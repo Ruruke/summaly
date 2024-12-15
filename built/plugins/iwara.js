@@ -9,12 +9,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.postProcess = exports.test = void 0;
+exports.test = test;
+exports.postProcess = postProcess;
 const decode_entities_1 = require("../utils/decode-entities");
 function test(url) {
     return /^(?:www|ecchi)[.]iwara[.]tv$/.test(url.hostname);
 }
-exports.test = test;
 function postProcess(summaly) {
     return __awaiter(this, void 0, void 0, function* () {
         const landingUrl = summaly.url;
@@ -41,4 +41,3 @@ function postProcess(summaly) {
         return summaly;
     });
 }
-exports.postProcess = postProcess;

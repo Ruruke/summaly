@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.StripEx = void 0;
+exports.StripEx = StripEx;
 function StripEx(ex) {
     return {
         description: ex.description,
@@ -14,4 +14,3 @@ function StripEx(ex) {
         url: ex.url,
     };
 }
-exports.StripEx = StripEx;

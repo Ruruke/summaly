@@ -9,7 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.fetchUrl = exports.getJson = exports.scpaping = void 0;
+exports.scpaping = scpaping;
+exports.getJson = getJson;
+exports.fetchUrl = fetchUrl;
 const fs = require("fs");
 const stream = require("stream");
 const util = require("util");
@@ -75,7 +77,6 @@ function scpaping(url, opts) {
         }
     });
 }
-exports.scpaping = scpaping;
 function getJson(url, referer) {
     return __awaiter(this, void 0, void 0, function* () {
         const res = yield getResponse({
@@ -90,7 +91,6 @@ function getJson(url, referer) {
         return yield JSON.parse(res.body);
     });
 }
-exports.getJson = getJson;
 function getResponse(args) {
     return __awaiter(this, void 0, void 0, function* () {
         if (!(0, check_allowed_url_1.checkAllowedUrl)(args.url)) {
@@ -241,4 +241,3 @@ function fetchUrl(url, path) {
         }
     });
 }
-exports.fetchUrl = fetchUrl;

@@ -9,14 +9,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.process = exports.test = void 0;
+exports.test = test;
+exports.process = process;
 // 高速Twitterプラグイン
 const got_1 = require("../utils/got");
 function test(url) {
     return /^(?:twitter|x)\.com$/.test(url.hostname)
         && /^[/]\w+[/]status[/](\d+)/.test(url.pathname);
 }
-exports.test = test;
 function process(url) {
     return __awaiter(this, void 0, void 0, function* () {
         var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
@@ -52,4 +52,3 @@ function process(url) {
         };
     });
 }
-exports.process = process;

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.cleanupUrl = void 0;
+exports.cleanupUrl = cleanupUrl;
 /**
  * To absolute and sanitize URL
  * @param url URL (absolute or relative)
@@ -23,4 +23,3 @@ function cleanupUrl(url, base) {
     }
     return null;
 }
-exports.cleanupUrl = cleanupUrl;

@@ -9,12 +9,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.postProcess = exports.test = void 0;
+exports.test = test;
+exports.postProcess = postProcess;
 const got_1 = require("../utils/got");
 function test(url) {
     return /^komiflo[.]com$/.test(url.hostname);
 }
-exports.test = test;
 function postProcess(summaly) {
     return __awaiter(this, void 0, void 0, function* () {
         var _a, _b, _c, _d, _e, _f, _g, _h;
@@ -43,4 +43,3 @@ function postProcess(summaly) {
         return summaly;
     });
 }
-exports.postProcess = postProcess;
